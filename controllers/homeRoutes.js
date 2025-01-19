@@ -89,11 +89,20 @@ router.get('/signup', (req, res) => {
 });
 
 router.get('/create-post-form', (req, res) => {
-  if (req.session.logged_in) {
-    res.redirect('/profile');
+  if (!req.session.logged_in) {
+    res.redirect('/login');
     return;
   }
 
   res.render('createPostForm');
+});
+
+router.get('/view-posts', (req, res) => {
+  if (!req.session.logged_in) {
+    res.redirect('/login');
+    return;
+  }
+
+  res.render('viewPosts');
 });
 module.exports = router;
