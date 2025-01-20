@@ -93,7 +93,7 @@ router.get('/create-post-form', withAuth, (req, res) => {
     res.redirect('/login');
     return;
   }
-  
+
   res.render('createPostForm');
 });
 
@@ -120,3 +120,4 @@ router.get('/view-posts', withAuth, async (req, res) => {
   }
 });
 module.exports = router;
+
