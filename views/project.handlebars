@@ -2,19 +2,23 @@
   <header>
     <h3>Create a New Post</h3>
   </header>
-  <form class="form w-100">
+  <form class="form w-100 edit-form">
     <div class="form-group">
       <label for="project-name">Title</label>
       <input id = "name-edit" class= "form-input" value="{{name}}"/>
     </div>
     <div class="form-group">
-      <label for="project-description">Content</label>
+      <label for="project-name">Content</label>
       <textarea id = "description-edit" class = "form-input">
         {{description}}
       </textarea>
     </div>
     <p>
-      <button class="btn btn-primary w-100">Create</button>
+      <button data-id="{{id}}" class="btn btn-primary w-100">Update Post</button>
+    </p>
+    <p>
+      <button class="btn btn-primary w-100">Delete Post</button>
     </p>
   </form>
 </div>
+<script src="/js/editPost.js"></script>
